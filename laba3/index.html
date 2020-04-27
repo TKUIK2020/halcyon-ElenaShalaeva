@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+	
+  <style>
+    *{
+    	margin:0;
+    	padding: 0;
+    }
+    body{
+          font-family: 'Muli', sans-serif;
+    }
+    .main{
+    	background: #FFFFFF;
+    	text-align: center;
+    	padding: 100px 50px 165px 50px;
+
+    }
+    .main h1{
+    	font-size: 30px;
+    	padding-bottom: 30px;
+    	color: #353535;
+    }
+    .line{
+    	width:30px;
+    	height:4px;
+    	background: #3dc9b3;
+    	position: relative;
+    	left: 50%;
+    	margin-bottom: 60px;
+    }
+    .photo{
+         margin: 20px auto;
+         padding-bottom: 32px;
+    }
+    .name{
+    	font-size: 15px;
+    	padding-bottom: 17px;
+    	align-content: center;
+    }
+    .main_cards{
+        display:flex;
+    	justify-content: space-around;
+    	
+    }
+    .about_name{
+    	font-size: 14px;
+    	color: #8c9398;
+    	text-align: center;
+    }
+    .line1{
+    	width:22px;
+    	height:2px;
+    	background: #3dc9b3;
+    	position: relative;
+    	left: 45%;
+    	margin-bottom: 19px;
+    }
+        
+   </style>
+   <div class="wrapper">
+             <div class="main">
+                  <h1>LOVE WHAT YOU DO, AND YOU’LL DO IT WELL</h1>
+                  <div class="line"></div>
+                  <div class="main_cards">
+                  <div class="card">
+                  	<div id="computer" class="photo"><img src="computer.png" ></div>
+                  	<h4 class="name">DIGITAL DESIGN //</h4>
+                  	<div class="line1"></div>
+                  	<p class="about_name">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+                  	Donec eget sem vel orci cursus dictum blandit in erat.<br> Praesent ultricies lectus dolor, cursus vehicula elit
+                  	laoreet non. <br>Etiam suscipit arcu lectus, in tempor lectus molestie eget.</p>
+                  </div>
+                   <div class="card">
+                  	<div id="code" class="photo"><img src="code.png"></div>
+                  	<h4 class="name">WEB DEVELOPMENT //</h4>
+                  	<div class="line1"></div>
+                  	<p class="about_name">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+                  	Donec eget sem vel orci cursus dictum blandit in erat.<br> Praesent ultricies lectus dolor, cursus vehicula elit
+                  	laoreet non. <br>Etiam suscipit arcu lectus, in tempor lectus molestie eget.</p>
+                  </div>
+                   <div class="card">
+                  	<div id="heart" class="photo"><img src="heart.png"></div>
+                  	<h4 class="name">WE LOVE YOU //</h4>
+                  	<div class="line1"></div>
+                  	<p class="about_name">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+                  	Donec eget sem vel orci cursus dictum blandit in erat.<br> Praesent ultricies lectus dolor, cursus vehicula elit
+                  	laoreet non. <br>Etiam suscipit arcu lectus, in tempor lectus molestie eget..</p>
+                  </div>
+                  </div>
+             </div>
+    </div> 
+    <script>
+         let computer=document.getElementById("computer");
+         let code=document.getElementById("code");
+         let heart=document.getElementById("heart");
+
+         function myComputer(){
+            alert("Computer");
+            }
+           computer.addEventListener('click', myComputer);
+        function myCode(){
+            alert("Code");
+            }
+            code.addEventListener('click', myCode);
+        function myHeart(){
+            alert("Heart");
+            }
+            heart.addEventListener('click', myHeart);
+   </script> 
+</body>
+
+</html>
