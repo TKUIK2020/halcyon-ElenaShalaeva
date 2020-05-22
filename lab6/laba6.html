@@ -173,7 +173,7 @@
 </div>
 <script>
 	let xhr= new XMLHttpRequest();
-	xhr.open('GET','https://jsonplaceholder.typicode.com/posts');
+	/*xhr.open('GET','https://jsonplaceholder.typicode.com/posts');
 	xhr.responseType = 'json';
 	xhr.send();
 	xhr.onprogress= function(event){
@@ -181,7 +181,16 @@
    	alert('Loading ' + event.loaded+'/'+event.total)
           } else{ alert('Done!')
             }
-    };
+    };*/
+   var body = {
+      title: 'foo',
+      body: 'bar',
+      userId: 1
+   } 
+   xhr.open('POST','https://jsonplaceholder.typicode.com/posts');
+   xhr.send(body);
+   xhr.onload=() =>alert(xhr.response);
+   
 
 </script>
 </body>
