@@ -53,8 +53,8 @@
 		left: 44%;
 		margin-top: 30px;
 		-webkit-box-shadow: 4px 4px 14px 3px rgba(0,0,0,0.74);
--moz-box-shadow: 4px 4px 14px 3px rgba(0,0,0,0.74);
-box-shadow: 4px 4px 14px 3px rgba(0,0,0,0.74);
+        -moz-box-shadow: 4px 4px 14px 3px rgba(0,0,0,0.74);
+        box-shadow: 4px 4px 14px 3px rgba(0,0,0,0.74);
 	}
 	.peep p{
 		font-size: 13px;
@@ -111,5 +111,24 @@ box-shadow: 4px 4px 14px 3px rgba(0,0,0,0.74);
    		<p align="center">Sed a lorem quis neque interdum <b>consequat ut sed sem.</b> Duis quis tempor nunc. Interdum et malesuada<br> fames ac ante ipsum primis in faucibus. Praesent id tempor ipsum. Fusce at massa ac nunc porta<br> fringilla sed eget neque. Quisque quis pretium nulla. Fusce eget bibendum neque, vel volutpat augue.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum <br>primis in faucibus.</p>
    	</div>
    </div>
+<script>
+	     //Задание 2
+	fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
+	.then(response=>{
+		response.json();
+		alert(response);
+	})
+	.catch(error=>alert(error));
+
+	    //Задание 3
+     const myFn = async () => {
+     await fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
+     .then(response=>{response.json();
+                      alert(response);
+                     })
+     };   
+     myFn().catch(error=>alert(error));
+
+</script>
 </body>
 </html>
