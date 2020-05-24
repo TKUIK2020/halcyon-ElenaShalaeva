@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Site JS9</title>
+	<meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan&display=swap" rel="stylesheet"> 
+</head>
+<body>
+  <style>
+  	*{
+  		margin: 0px;
+  		padding: 0px;
+  	}
+  	body{
+  		
+  		font-family: 'Spartan', sans-serif;
+  	}
+  	.block{
+  		background-image: url('bg.png');
+  		width: 1600px;
+  		height: 447px;
+  		display:flex;
+  		flex-direction: column;
+  		justify-content: center;
+  		width: 100%;
+        margin: 0 auto;
+  	}
+  	.pic{
+  		position: relative;
+  		left: 50%;
+  	}
+  	h3{
+  		color: #ffffff;
+  		margin-top: 20PX;
+  		margin-bottom: 40px;
+  	}
+  	.wow{
+  		display: flex;
+  		justify-content: center;
+  	}
+  	.inp{
+        background-color: transparent;
+        width: 400px;
+        height: 56px;
+        border-color: #ffffff;
+        border-width: 2px;
+        margin-right: 6px;
+  	}
+  	.inp[type=text]{
+  		 color: #fff;
+  	}
+  	.peep{
+  		color: #ffffff;
+  		background-color: #3dc9b3;
+  		width: 100px;
+  		height: 60px;
+  		text-align: center;
+  		display: flex;
+  		justify-content: space-around;
+  	}
+  	.peep button p:hover{
+        opacity: 74%;
+    }
+  	p{
+  		margin-top: 24px;
+  	}
+  </style>
+  <div class="block">
+  	  <div class="pic"><img src="telegram.png"></div>
+  	  <h3 align="center">SUBSCRIBE TO STAY IN THE LOOP</h3>
+  	  <div class="wow">
+  	  <input type="text" pattern="^[a-zA-Z\s]+$" id="foo" class="inp" onchange="emailTest()""></input>
+  	  <button id="peep" class="peep" onclick="emailTest()">
+  	  	<p>SEND</p>
+  	  </button>
+  	</div>
+  </div>
+<script>
+const button = document.getElementById('peep')
+const input = document.getElementById('foo')
+
+let mail = /[-.\w]+@([\w-]+\.)+[\w-]+/g
+function emailTest() {
+
+    if (input.value.replace(/ /g, "").match(mail)) {
+        input.style.borderColor = "green"
+        localStorage.setItem("email", input.value)
+    } else {
+
+        input.style.borderColor = "red"
+        input.setCustomValidity("Email введен неверно");
+        console.log("invalid email")
+    }
+}
+let fun = localStorage.getItem("email")
+if (fun!= null) {
+    input.value = fun;
+}
+</script>
+</body>
+</html>
