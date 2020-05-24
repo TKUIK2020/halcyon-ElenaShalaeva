@@ -123,10 +123,9 @@
 	    //Задание 3
      const myFn = async () => {
      await fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
-     .then(response=>{response.json();
-                      alert(response);
-                     })
-     };   
+     .then(response=>(response.json())
+     	.then(data=>{
+     		console.log(data)});
      myFn().catch(error=>alert(error));
 
 </script>
