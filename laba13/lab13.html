@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<title></title>
+</head>
+<body>
+    <div class="block">
+    	<div class="part1">
+    		<h4>Featured</h4>
+    	</div>
+    	<div class="part2">
+    		<h3>Special title treatment</h3>
+            <p>With supporting text below as a natural lead-in to additional content.</p>
+            <button class="peep" onclick="viewBlock()">Go somewhere!</button>
+    	</div>
+    </div>
+
+    <div id="modWin" class="modalBlock" hidden>
+            <div class="title" style="border-top: none; margin: 0px;">
+                <h3>Modal title</h3>
+                <button class="cross" onclick="hideBlock()">
+                   	    <div class="leftright"></div>
+                        <div class="rightleft"></div>
+                </button>
+            </div>
+            <div class="mblock1"><p>Modal body text goes here</p></div>
+            <div class="mblock2" style="align-items: center;">
+                <button class="closePeep" onclick="hideBlock()">
+                Close</button>
+                <button class="peep">Save changes</button>
+            </div>
+    </div>
+<style>
+.modalBlock{
+	display:flex;
+    flex-direction: column;
+    /*justify-content: flex-start;*/
+    margin-left: 30px;
+    margin-top: 30px;  
+    width: 500px;
+    height: 173px;
+    border: 1px solid #778899;
+    border-radius: 10px;
+    background-color: #E0FFFF;
+}
+.title{
+	display: flex;
+	flex-direction: row;
+	margin-left: 30px;
+
+}
+.title h3{
+	padding-left: 30px;
+	margin-right: 270px;
+}
+.closePeep{
+	margin-right: 5px; 
+	margin-left: auto; 
+	background-color: #646464;
+	padding: 5px;
+    margin-bottom: 20px;
+    border: 0px;
+    border-radius: 5px;
+}
+</style>
+<style>
+.block{
+	display:flex;
+    flex-direction: column;
+    /*justify-content: flex-start;*/
+    margin-left: 30px;
+    margin-top: 30px;  
+    width: 600px;
+    height: 203px;
+    border: 1px solid #778899;
+    border-radius: 10px;
+}
+.part1{
+	background-color: #B0C4DE;
+	color: #000000;
+	border: 1px solid #778899;
+    border-radius: 10px;
+}
+.part1 h4{ 
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 30px;
+}
+.peep{
+	background-color: #4682B4;
+	color: white;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 0px;
+    border-radius: 5px;
+
+}
+.part2{
+	padding-left: 30px;
+	border: 1px solid #778899;
+    border-radius: 10px;
+}
+h3{
+	margin-top: 15px;
+}
+ .closePeep{
+	margin-right: 5px; 
+	margin-left: auto; 
+	background-color: #5F9EA0;
+	color: #ffffff;
+}
+ .mblock1{
+ 	height: 50px;
+	border: 1px solid #B0C4DE;
+	padding-left: 30px;
+	margin-bottom: 10px;
+	padding-top: 10px;
+}
+.mblock2{
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin-right: 20px;
+	padding-top: 7px;
+
+}
+ .cross {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    background: transparent; 
+}
+.cross .leftright {
+    height: 4px;
+    width: 15px;
+    position: absolute;
+    margin-top: 10px;
+    background-color: #337AB7;
+    border-radius: 2px;
+    transform: rotate(45deg);
+}
+.cross .rightleft {
+    height: 4px;
+    width: 15px;
+    position: absolute;
+    margin-top: 10px;
+    background-color: #337AB7;
+    border-radius: 2px;
+    transform: rotate(-45deg);
+	    }
+</style>
+
+
+<script src="js/lab13.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
