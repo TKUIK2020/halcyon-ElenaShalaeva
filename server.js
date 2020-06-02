@@ -1,20 +1,13 @@
 const http = require("http");
 const fs = require("fs");
- 
-http.createServer(function(request, response){
-     
-    console.log(`Запрошенный адрес: ${request.url}`);
-    if(request.url.startsWith("/laba10/")){     
-        const filePath = request.url.substr(1);
-        fs.readFile(filePath, function(error, data){
-           {
-                response.setHeader("Content-Type", "text/html");
-                response.end(data);
-            }
-        })
-    }
-    else{      
-        response.end("Hello World!");
-    }
-}).listen(3000);
+const joker = require('random-joke-getter')
+ request("http").createServer((req, res) => {
 
+    console.log(`url: ${req.url}`)
+
+    jokes.getRandomJoke((joke) => {
+
+        res.end(joke)
+
+    })
+}).listen(3000, () => console.log("Server is on"));
