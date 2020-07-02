@@ -1,0 +1,73 @@
+body{
+	font-family: 'Orbitron', sans-serif;
+	background: url("img/фон.jpg") 0 0 no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+h1 {
+	color: white;
+	font-size: 45px;
+	padding: 15px 0px 0px 10px;
+}
+@font-face {
+	
+	font-style: normal;
+	font-weight: normal;
+}
+button {
+	background-color: #fff;
+	color: #000;
+	height: 50px;
+	font-size: 30px;
+	position: relative;
+	border: 1px solid silver;
+}
+input {
+	width: 25px;
+	height: 25px;
+	margin: 5px 0px 0px 5px;
+
+}
+
+h2 {
+	text-align: center;
+	color: #FFB6C1;
+}
+a {
+	text-decoration: none;
+	color:#00FFFF;
+}
+a:hover {
+	font-size: 30px;
+	color: #8A2BE2;
+	text-decoration: underline;
+}
+a:active {
+	color: #FFB6C1;
+}
+a:visited {
+	color: #FFB6C1;
+}
+.github {
+	display: block;
+	font-size: 30px;
+	font-weight: 200;
+	text-align: center;
+}
+footer {
+	margin: 140px 0px 0px 0px;
+}
+h1 {
+	text-align: center;
+
+}
+#but {
+	margin-left: 47%;
+	margin-top: 30px;
+}
+#game {
+	margin-left: 43.5%;
+	opacity: 0;
+}
